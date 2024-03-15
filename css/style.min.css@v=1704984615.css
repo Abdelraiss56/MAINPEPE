@@ -4647,16 +4647,16 @@ body .ui-tooltip {
 	transform: rotate(30deg)
 }
 .roadmap {
-	padding-bottom: 44rem
+	padding-bottom: 55rem
 }
 @media(max-width: 1200px) {
 	.roadmap {
-		padding-bottom: 39rem
+		padding-bottom: 52rem
 	}
 }
 @media(max-width: 768px) {
 	.roadmap {
-		padding-bottom: 0
+		padding-bottom: 3rem
 	}
 }
 .roadmap__title {
@@ -5517,3 +5517,8 @@ body .ui-tooltip {
     display: block; /* Helps with spacing */
     margin-top: 20px; /* Space above the percentages */
 }
+    .control__btn.ui-btn.disabled {
+        opacity: 0.5; /* Adjust the opacity level to your preference */
+        pointer-events: none; /* Disables pointer events on the button */
+        cursor: not-allowed; /* Changes cursor to indicate that the button is disabled */
+    }
