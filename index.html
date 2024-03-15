@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultra Instinct PEPE</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.min.css@v=1704984615.css">
+    <link rel="icon" href="img/icon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Add custom fonts -->
+    <style>
+        @font-face {
+            font-family: "Saiyan-Sans";
+            src: url("css/fonts/Saiyan-Sans.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Saiyan-Sans Right Oblique";
+            src: url("css/fonts/Saiyan-Sans Right Oblique.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "Saiyan-Sans Left Oblique";
+            src: url("css/fonts/Saiyan-Sans Left Oblique.ttf") format("truetype");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: "swiper-icons";
+            src: url("data:application/font-woff;charset=utf-8;base64, d09GRgABAAAAAAZgABAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAAGRAAAABoAAAAci6qHkUdERUYAAAWgAAAAIwAAACQAYABXR1BPUwAABhQAAAAuAAAANuAY7+xHU1VCAAAFxAAAAFAAAABm2fPczU9TLzIAAAHcAAAASgAAAGBP9V5RY21hcAAAAkQAAACIAAABYt6F0cBjdnQgAAACzAAAAAQAAAAEABEBRGdhc3AAAAWYAAAACAAAAAj//wADZ2x5ZgAAAywAAADMAAAD2MHtryVoZWFkAAABbAAAADAAAAA2E2+eoWhoZWEAAAGcAAAAHwAAACQC9gDzaG10eAAAAigAAAAZAAAArgJkABFsb2NhAAAC0AAAAFoAAABaFQAUGG1heHAAAAG8AAAAHwAAACAAcABAbmFtZQAAA/gAAAE5AAACXvFdBwlwb3N0AAAFNAAAAGIAAACE5s74hXjaY2BkYGAAYpf5Hu/j+W2+MnAzMYDAzaX6QjD6/4//Bxj5GA8AuRwMYGkAPywL13jaY2BkYGA88P8Agx4j+/8fQDYfA1AEBWgDAIB2BOoAeNpjYGRgYNBh4GdgYgABEMnIABJzYNADCQAACWgAsQB42mNgYfzCOIGBlYGB0YcxjYGBwR1Kf2WQZGhhYGBiYGVmgAFGBiQQkOaawtDAoMBQxXjg/wEGPcYDDA4wNUA2CCgwsAAAO4EL6gAAeNpj2M0gyAACqxgGNWBkZ2D4/wMA+xkDdgAAAHjaY2BgYGaAYBkGRgYQiAHyGMF8FgYHIM3DwMHABGQrMOgyWDLEM1T9/w8UBfEMgLzE////P/5//f/V/xv+r4eaAAeMbAxwIUYmIMHEgKYAYjUcsDAwsLKxc3BycfPw8jEQA/gZBASFhEVExcQlJKWkZWTl5BUUlZRVVNXUNTQZBgMAAMR+E+gAEQFEAAAAKgAqACoANAA+AEgAUgBcAGYAcAB6AIQAjgCYAKIArAC2AMAAygDUAN4A6ADyAPwBBgEQARoBJAEuATgBQgFMAVYBYAFqAXQBfgGIAZIBnAGmAbIBzgHsAAB42u2NMQ6CUAyGW568x9AneYYgm4MJbhKFaExIOAVX8ApewSt4Bic4AfeAid3VOBixDxfPYEza5O+Xfi04YADggiUIULCuEJK8VhO4bSvpdnktHI5QCYtdi2sl8ZnXaHlqUrNKzdKcT8cjlq+rwZSvIVczNiezsfnP/uznmfPFBNODM2K7MTQ45YEAZqGP81AmGGcF3iPqOop0r1SPTaTbVkfUe4HXj97wYE+yNwWYxwWu4v1ugWHgo3S1XdZEVqWM7ET0cfnLGxWfkgR42o2PvWrDMBSFj/IHLaF0zKjRgdiVMwScNRAoWUoH78Y2icB/yIY09An6AH2Bdu/UB+yxopYshQiEvnvu0dURgDt8QeC8PDw7Fpji3fEA4z/PEJ6YOB5hKh4dj3EvXhxPqH/SKUY3rJ7srZ4FZnh1PMAtPhwP6fl2PMJMPDgeQ4rY8YT6Gzao0eAEA409DuggmTnFnOcSCiEiLMgxCiTI6Cq5DZUd3Qmp10vO0LaLTd2cjN4fOumlc7lUYbSQcZFkutRG7g6JKZKy0RmdLY680CDnEJ+UMkpFFe1RN7nxdVpXrC4aTtnaurOnYercZg2YVmLN/d/gczfEimrE/fs/bOuq29Zmn8tloORaXgZgGa78yO9/cnXm2BpaGvq25Dv9S4E9+5SIc9PqupJKhY") format("woff");
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+</head>
+
+<body class="">
+    <div class="site-preloader">
+        <div class="site-preloader__wrapper">
+            <div class="site-preloader__logo">
+                <img src="img/logo.svg" alt="">
+                <div class="site-preloader__progress"></div>   
+            </div>
+            <div class="site-preloader__loader">
+                <div class="site-preloader__text">0%</div>
+                <div class="site-preloader__bar"></div>
+            </div>
+
+        </div>
+    </div>
+    <header class="site-header" data-aos="fade-down" data-aos-duration="1000">
+        <div class="">
+            <div class="site-header__wrapper">
+                <a class="site-header__logo" href="index.html">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <ul class="site-header__menu">
+                    <li class="site-header__menu-item"><a href="index.html#about" class="mainpage">About</a></li>
+                    <li class="site-header__menu-item"><a href="index.html#tokenomics" class="mainpage">Tokenomics</a></li>
+                    <li class="site-header__menu-item"><a href="index.html#roadmap" class="mainpage">Roadmap</a></li>
+                    <li class="site-header__menu-item"><a href="https://linktr.ee/uipepe" class="mainpage">SOCIALS</a></li>
+                </ul>
+                <div class="site-header__control">
+                    <a class="site-header__btn ui-btn ui-btn_fill ui-btn_inline hide-mob" href="#" target="_blank">PRESALE</a>
+                    <a class="site-header__btn ui-btn ui-btn_fill ui-btn_inline hide-mob" href="https://dextools.io/app/en/bnb/pair-explorer/0x46d3336153b51ac3bd40bf68025a5f4991b9d027" target="_blank">WHITE PAPER</a>
+                    <div class="site-header__menu-btn mob-menu-btn">
+                        <svg class="ui-svg-icon" width="18" height="12" viewBox="0 0 18 12" xmlns="http://www.w3.org/2000/svg">
+                            <path class="line-1" d="M18 2H0V0H18V2Z"/>
+                            <path class="line-2" d="M18 7H0V5H18V7Z"/>
+                            <path class="line-3" d="M18 12H0V10H18V12Z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mob-menu">
+                    <ul class="mob-menu__ul">
+                        <li class="mob-menu__li"><a href="index.html#about" class="mainpage">About</a></li>
+                        <li class="mob-menu__li"><a href="index.html#tokenomics" class="mainpage">Tokenomics</a></li>
+                        <li class="mob-menu__li"><a href="index.html#roadmap" class="mainpage">Roadmap</a></li>
+                        <li class="mob-menu__li"><a href="index.html#partners" class="mainpage">Partners</a></li>
+                    </ul>
+                    <div class="mob-menu__row">
+                        <a href="https://pancakeswap.finance/swap?outputCurrency=0x624351363F49eA7748B43e0c63566D2a5A27506a" class="mob-menu__btn ui-btn" target="_blank">PRESALE</a>
+                        <a href="https://dextools.io/app/en/bnb/pair-explorer/0x46d3336153b51ac3bd40bf68025a5f4991b9d027" class="mob-menu__btn ui-btn" target="_blank">WHITEPAPER</a>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </header><div class="h60"></div>
+<section class="main">
+    <div class="container">
+        <div class="main__wrapper">
+            <div class="main__content">
+                <h1 class="main__title ui-title" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="">$UIPEPE</h1>
+                <p class="main__text" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-anchor=".main__title" style="font-weight: bold;">Welcome to Ultra Instinct PEPE ($UIPEPE), a community-driven meme coin on the Solana blockchain, inspired by the legendary Pepe and the transcendent power of Dragon Ball's Ultra Instinct. As a tribute to these iconic symbols of perseverance and transformation, $UIPEPE is not just a token—it's a movement. With the spirit of collaboration and innovation at our core, we're on a mission to elevate Solana-based meme coins to unparalleled heights. Join us in this thrilling journey to make Solana meme coins legendary!</p>
+
+                
+                <div class="main__contract contract" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" data-aos-anchor=".main__title">
+                    <div class="contract__title">Contract:</div>
+                    <div class="contract__text ui-btn ui-js-copy" data-copy="0x624351363F49eA7748B43e0c63566D2a5A27506a">0x624351363F49eA7748B43e0c63566D2a5A27506a</div>
+                </div>
+                <div class="main__control" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200" data-aos-anchor=".main__title">
+                    <div class="control">
+    <a href="#" class="control__btn ui-btn" target="_blank">Buy now</a>
+    <a href="https://linktr.ee/uipepe" class="control__btn ui-btn" target="_blank">Read White Paper</a>
+    <a href="https://t.me/+8AX5DhTNRb40ZDFk" class="control__social ui-btn-icon" target="_blank">
+        <svg class="ui-btn-icon__icon" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="20" r="20" fill="#2AABEE"/>
+            <g filter="url(#filter0_d_74_193)">
+            <path d="M29.2189 12.1501C26.4485 13.2741 14.5696 18.0939 11.2874 19.4076C9.08625 20.249 10.3748 21.0379 10.3748 21.0379C10.3748 21.0379 12.2538 21.6689 13.8646 22.1422C15.4752 22.6156 16.3341 22.0897 16.3341 22.0897L23.904 17.0937C26.5884 15.3056 25.9442 16.7781 25.2998 17.4093C23.904 18.7768 21.5954 20.9327 19.6627 22.6683C18.8037 23.4045 19.2331 24.0355 19.6091 24.3511C21.0048 25.5082 24.8168 27.8747 25.0314 28.0324C26.1655 28.8189 28.3964 29.9511 28.7357 27.5591L30.0779 19.3026C30.5075 16.5154 30.9369 13.9384 30.9904 13.2022C31.1517 11.4139 29.2189 12.1501 29.2189 12.1501Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_74_193" x="0" y="2" width="41" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="5"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.180392 0 0 0 0 0.388235 0 0 0 0 0.933333 0 0 0 0.1 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_74_193"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_193" result="shape"/>
+            </filter>
+            </defs>
+        </svg>
+    </a>
+    <a href="https://twitter.com/uipepetoken" class="control__social ui-btn-icon" target="_blank">
+        <svg class="ui-btn-icon__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="black"/>
+            <path d="M25.99 10H29.298L22.071 18.26L30.573 29.5H23.916L18.702 22.683L12.736 29.5H9.426L17.156 20.665L9 10H15.826L20.539 16.231L25.99 10ZM24.829 27.52H26.662L14.83 11.876H12.863L24.829 27.52Z" fill="white"/>
+        </svg>
+    </a>
+</div>                </div>
+                
+            </div>
+            <div class="main__img" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200" data-aos-anchor=".main__title">
+                <div class="main__coin float-coin float-coin--type-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600" data-aos-anchor=".main__img"></div>
+                <div class="main__coin float-coin float-coin--type-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay="700" data-aos-anchor=".main__img"></div>
+                <div class="main__coin float-coin float-coin--type-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay="800" data-aos-anchor=".main__img"></div>
+                <div class="main__coin float-coin float-coin--type-4" data-aos="fade-up" data-aos-duration="500" data-aos-delay="900" data-aos-anchor=".main__img"></div>
+                <img src="img/main.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section id="about" class="about">
+    <div class="about__item">
+        <div class="container">
+            <div class="about__coin about__coin--1 float-coin float-coin--type-7" data-aos="fade-up" data-aos-duration="500" data-aos-delay=""></div>
+            <div class="about__wrapper">
+                <img class="about__img" src="img/about-1.gif" alt="" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="">
+                <div class="about__content" data-aos="fade-left" data-aos-duration="500" data-aos-delay="">
+                    <h3 class="about__title ui-title">Beyond Limits: Pepe's Ultra Instinct Legacy</h3>
+                    <div class="about__text ui-format">
+                        <p>UIPEPE symbolizes the ultimate fusion of meme culture and anime heritage. In the universe of Dragon Ball Z, Ultra Instinct represents a state beyond the limits of mortals and gods alike. Pepe, as the greatest meme of our times, achieves a form that transcends the digital realm's boundaries, embodying the spirit of surpassing limits.</p>
+                        <p>Our token isn't just a homage; it's a vessel for carrying forward Akira Toriyama's legacy in a form that resonates with today's digital generation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about__item about__item--background" style="background-image: url('img/about-back.png');">
+        <div class="container">
+            <div class="about__coin about__coin--2 float-coin float-coin--type-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay=""></div>
+            <div class="about__wrapper">
+                <img class="about__img" src="img/about-2.png" alt="" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="">
+                <div class="about__content" data-aos="fade-right" data-aos-duration="500" data-aos-delay="">
+                    <h3 class="about__title ui-title">Utility of $UIPEPE</h3>
+                    <div class="about__text ui-format">
+                        <p>Beyond the meme, $UIPEPE holds a utility that sets it apart. Our vision culminates in the creation of Crypto Escrow, the first global platform facilitating safe, crypto-based transactions. From selling a phone to buying a house, $UIPEPE will be at the center of secure exchanges, protecting both buyer and seller.</p>
+                        <p> This utility not only provides real-world application but also ensures that $UIPEPE becomes an integral part of the digital economy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about__item">
+        <div class="container">
+            <div class="about__coin about__coin--3 float-coin float-coin--type-3" data-aos="fade-up" data-aos-duration="500" data-aos-delay=""></div>
+            <div class="about__wrapper">
+                <img class="about__img" src="img/about-3.png" alt="" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="">
+                <div class="about__content" data-aos="fade-left" data-aos-duration="500" data-aos-delay="">
+                    <h3 class="about__title ui-title">START OF THE JOURNEY</h3>
+                    <div class="about__text ui-format">
+                        <p>Join $UIPEPE's presale on PinkSale and tap into the fusion of iconic memes with Dragon Ball Z. This isn't just a coin; it's an opportunity for early investors to achieve impressive ROI as Pepe powers up. By getting in early, you're positioning yourself for potential gains as we push the boundaries of meme coins on the Solana blockchain. Don't miss out on the chance to be part of Pepe's profitable journey to Ultra Instinct. Invest early, aim for the stars, and watch your investment soar!</p>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="roadmap" class="roadmap">
+    <div class="container">
+        <div class="roadmap__coin roadmap__coin--1 float-coin float-coin--type-1" data-aos="fade-up" data-aos-duration="500" data-aos-delay=""></div>
+        <div class="roadmap__coin roadmap__coin--2 float-coin float-coin--type-5" data-aos="fade-up" data-aos-duration="500" data-aos-delay=""></div>
+        <h2 class="roadmap__title ui-title" data-aos="fade-up" data-aos-duration="500" data-aos-delay="">ROADMAP</h2>
+        <div class="roadmap__wrapper">
+            <div class="roadmap-item" data-aos="fade" data-aos-duration="500" data-aos-delay="100" data-aos-anchor=".roadmap__wrapper">
+                <div class="roadmap-item__stage">Stage 1</div>
+                <h3 class="roadmap-item__title">🏗️ Build</h3>
+                <div class="roadmap-item__text ui-format">
+                    <ul>
+                        <li>UIPEPE Concept</li>
+                        <li>Market research</li>
+                        <li>Development of the website</li>
+                        <li>Development of the contract</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-item" data-aos="fade" data-aos-duration="500" data-aos-delay="800" data-aos-anchor=".roadmap__wrapper">
+                <figure class="roadmap__mark" data-aos="fade" data-aos-duration="500" data-aos-delay="3000" data-aos-anchor=".roadmap__wrapper">
+                    <img src="img/mark.png" alt="">
+                </figure>
+                <div class="roadmap-item__stage">Stage 2</div>
+                <h3 class="roadmap-item__title">🌸 Presale</h3>
+                <div class="roadmap-item__text ui-format">
+                    <ul>
+                        <li>Create socials</li>
+                        <li>Pre-launch marketing campaign</li>
+                        <li>Contract Audit</li>
+                        <li>Presale on Pinksale</li>
+                        <li>The first AMA Session</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-item" data-aos="fade" data-aos-duration="500" data-aos-delay="1400" data-aos-anchor=".roadmap__wrapper">
+
+                <div class="roadmap-item__stage">Stage 3</div>
+                <h3 class="roadmap-item__title">🚀 Launch</h3>
+                <div class="roadmap-item__text ui-format">
+                    <ul>
+                        <li>Listing on Raydium</li>
+                        <li>Renounce ownership of contract</li>
+                        <li>Dextools & Dexview updates</li>
+                        <li>Post-launch marketing</li>
+                        <li>CMC & CG Listings</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-item" data-aos="fade" data-aos-duration="500" data-aos-delay="2000" data-aos-anchor=".roadmap__wrapper">
+                <div class="roadmap-item__stage">Stage 4</div>
+                <h3 class="roadmap-item__title">📈 Growth</h3>
+                <div class="roadmap-item__text ui-format">
+                    <ul>
+                        <li>Coinzilla & A-ads Marketing</li>
+                        <li>Influencers On-Boarding</li>
+                        <li>Dextools Trending</li>
+                        <li>Buy & Shill Competitions</li>
+                        <li>Tier-2 CEX Listings</li>
+                        <li>Twitter Expansion</li>
+                        <li>MEXC & Bitget Listings</li>
+                        <li>Global partnerships</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-item" data-aos="fade" data-aos-duration="500" data-aos-delay="2700" data-aos-anchor=".roadmap__wrapper">
+                <div class="roadmap-item__stage">Stage 5</div>
+                <h3 class="roadmap-item__title">🌙 Escrow Service</h3>
+                <div class="roadmap-item__text ui-format">
+                    <ul>
+                        <li>MEXC & Bitget Listings</li>
+                        <li>Huobi & Gate Listings</li>
+                        <li>Bybit & Binance Listings</li>
+                        <li>Develop and test escrow platform</li>
+                        <li>Launch UIPEPE escrow service</li>
+                        <li>Secure UIPEPE’s utility and future</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="roadmap-line-mob" data-aos="roadmap-line-mob" data-aos-duration="3000" data-aos-easing="linear" data-aos-anchor=".roadmap__wrapper"></div>
+            <div class="roadmap__back">
+                <svg width="1205" height="176" viewBox="0 0 1205 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_7_51" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1205" height="176">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M859.085 42.375C855.786 41.8843 852.631 41.4153 849.635 40.9731C808.275 34.8705 758.243 44.7213 715.457 57.7328C672.73 70.7265 637.584 86.7601 626.155 92.7169C625.15 93.2411 624.06 93.8187 622.886 94.4412C610.596 100.958 589.033 112.391 557.15 118.884C522.21 125.998 474.98 127.168 413.897 109.717C308.434 79.5881 240.12 113.738 181.565 143.01C175.556 146.014 169.65 148.966 163.817 151.792C113.182 176.328 58.8433 177.026 0.885498 174.369L1.11448 169.374C59.024 172.029 112.232 171.232 161.637 147.293C167.436 144.483 173.326 141.537 179.335 138.531C237.955 109.208 307.88 74.2297 415.271 104.91C475.604 122.146 522.02 120.934 556.153 113.984C587.309 107.64 608.318 96.5038 620.562 90.0138C621.736 89.3913 622.83 88.8116 623.844 88.283C635.54 82.1872 670.972 66.0351 714.002 52.9491C756.974 39.8809 807.879 29.7579 850.365 36.0267C853.353 36.4676 856.496 36.9349 859.78 37.4232C906.862 44.424 983.043 55.7514 1051.71 55.9112C1088.46 55.9967 1122.85 52.8801 1149.4 44.2987C1175.98 35.7086 1194.14 21.851 1199.58 0.814911L1204.42 2.06595C1198.36 25.5299 1178.21 40.2433 1150.94 49.0565C1123.64 57.8783 1088.64 60.9971 1051.7 60.9112C982.647 60.7505 906.128 49.371 859.085 42.375Z" fill="url(#paint0_linear_7_51)"/>
+                    </mask>
+                    <g mask="url(#mask0_7_51)">
+                    <rect x="1" y="1" width="1203" height="174" fill="url(#paint1_linear_7_51)" data-aos="roadmap-line-desk" data-aos-duration="3000" data-aos-easing="linear" data-aos-anchor=".roadmap__wrapper"/>
+                    </g>
+                    <defs>
+                    <linearGradient id="paint0_linear_7_51" x1="602.653" y1="0.814911" x2="602.653" y2="175.42" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FCD535"/>
+                    <stop offset="1" stop-color="#CE6300"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_7_51" x1="602.5" y1="1" x2="602.5" y2="175" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#FCD535"/>
+                    <stop offset="1" stop-color="#CE6300"/>
+                    </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Tokenomics Section Start -->
+<section id="token" class="counter-area section-padding fadeInLeft wow" data-wow-delay="1s">
+    <div class="container" data-aos="fade-up">
+        <div class="section-header text-center">
+            <h2 style="font-size: 8rem; font-family: 'Saiyan-Sans', sans-serif; font-weight: normal; color: #d26c04; background: linear-gradient(180deg, #FCD535 0%, #CE6300 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; text-fill-color: transparent;">Tokenomics</h2>
+        </div>
+        <!-- Allocation Details -->
+        <div class="text-center" style="margin-bottom: 30px;">
+            <p style="font-size: 40px; padding-bottom: 5px;"><strong style="background: linear-gradient(180deg, #FCD535 0%, #CE6300 100%); -webkit-background-clip: text; color: transparent;">Allocation:</strong></p>
+            <p><strong>Presale:</strong> <span style="font-family: Arial, sans-serif; font-size: 18px;">672,000,000 $UIPEPE (67.2%)</span></p>
+            <p><strong>DEX Liquidity:</strong> <span style="font-family: Arial, sans-serif; font-size: 18px;">325,584,000 $UIPEPE (32.6%)</span></p>
+            <p><strong>Community & Airdrops:</strong> <span style="font-family: Arial, sans-serif; font-size: 18px;">9,999,944.046907 $UIPEPE (1%)</span></p>
+        </div>
+<div class="row">
+    <!-- Presale Allocation -->
+    <div class="col-lg-4 col-md-12">
+        <div class="counter-container text-center" data-aos="fade-right">
+            <div data-aos="fade-left" data-aos-delay="300">
+                <div class="icon"><img src="img/Untitled design (28).png" alt=""></div>
+            </div>
+            <div class="gradient-text">67.2%</div>
+            <h2 style="font-size: 24px;">Token Presale 💰</h2>
+        </div>
+    </div>
+    <!-- DEX Liquidity Allocation -->
+    <div class="col-lg-4 col-md-12">
+        <div class="counter-container text-center" data-aos="fade-right">
+            <div data-aos="fade-left" data-aos-delay="300">
+                <div class="icon"><img src="img/Untitled design (31).png" alt=""></div>
+            </div>
+            <div class="gradient-text">32.6%</div>
+            <h2 style="font-size: 24px;">DEX Listing Liquidity 💧</h2>
+        </div>
+    </div>
+    <!-- Community & Airdrops Allocation -->
+    <div class="col-lg-4 col-md-12">
+        <div class="counter-container text-center" data-aos="fade-right">
+            <div data-aos="fade-left" data-aos-delay="300">
+                <div class="icon"><img src="img/Untitled design (30).png" alt=""></div>
+            </div>
+            <div class="gradient-text">1%</div>
+            <h2 style="font-size: 24px;">Community & Airdrops 🎁</h2>
+        </div>
+    </div>
+</div>
+
+        <!-- Key Highlights -->
+        <div class="row" style="margin-top: 50px;">
+            <div class="col text-center">
+                <h4 style="background: linear-gradient(180deg, #FCD535 0%, #CE6300 100%); -webkit-background-clip: text; color: transparent; padding-bottom: 10px; font-size: 40px;">Key Highlights</h4>
+                <ul style="list-style-type: none; font-size: 18px;">
+                    <li>Audited Contract for Maximum Security</li>
+                    <li>100% Community Focused with No Team Tokens</li>
+                    <li>Liquidity Locked for 1 Year to Ensure Stability</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Join the Legacy -->
+        <div class="section-header text-center" style="margin-top: 50px;">
+            <h4 style="background: linear-gradient(180deg, #FCD535 0%, #CE6300 100%); -webkit-background-clip: text; color: transparent; padding-bottom: 10px; font-size: 40px;">Join the Legacy 🚀</h4>
+            <p style="font-size: 18px;">Be part of $UIPEPE's revolutionary journey on PinkSale. Secure your spot in a project blending meme culture with genuine financial potential.</p>
+        </div>
+    </div>
+</section>
+<!-- End Tokenomics Section -->
+
+
+
+<section class="buy" style="background-image: url('img/buy-back.png');">
+    <div class="container">
+        <div class="buy__wrapper"> 
+            <div class="buy__content" data-aos="fade-right" data-aos-duration="500" data-aos-delay="">
+                <img src="img/Untitled-1.png" width="290" alt="Description of Image">
+                <div class="control">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x624351363F49eA7748B43e0c63566D2a5A27506a" class="control__btn ui-btn" target="_blank">Buy now</a>
+    <a href="https://dextools.io/app/en/bnb/pair-explorer/0x46d3336153b51ac3bd40bf68025a5f4991b9d027" class="control__btn ui-btn" target="_blank">Chart</a>
+    <a href="https://t.me/+8AX5DhTNRb40ZDFk" class="control__social ui-btn-icon" target="_blank">
+        <svg class="ui-btn-icon__icon" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="20" r="20" fill="#2AABEE"/>
+            <g filter="url(#filter0_d_74_193)">
+            <path d="M29.2189 12.1501C26.4485 13.2741 14.5696 18.0939 11.2874 19.4076C9.08625 20.249 10.3748 21.0379 10.3748 21.0379C10.3748 21.0379 12.2538 21.6689 13.8646 22.1422C15.4752 22.6156 16.3341 22.0897 16.3341 22.0897L23.904 17.0937C26.5884 15.3056 25.9442 16.7781 25.2998 17.4093C23.904 18.7768 21.5954 20.9327 19.6627 22.6683C18.8037 23.4045 19.2331 24.0355 19.6091 24.3511C21.0048 25.5082 24.8168 27.8747 25.0314 28.0324C26.1655 28.8189 28.3964 29.9511 28.7357 27.5591L30.0779 19.3026C30.5075 16.5154 30.9369 13.9384 30.9904 13.2022C31.1517 11.4139 29.2189 12.1501 29.2189 12.1501Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_74_193" x="0" y="2" width="41" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="5"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.180392 0 0 0 0 0.388235 0 0 0 0 0.933333 0 0 0 0.1 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_74_193"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_193" result="shape"/>
+            </filter>
+            </defs>
+        </svg>
+    </a>
+    <a href="https://twitter.com/uipepetoken" class="control__social ui-btn-icon" target="_blank">
+        <svg class="ui-btn-icon__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="black"/>
+            <path d="M25.99 10H29.298L22.071 18.26L30.573 29.5H23.916L18.702 22.683L12.736 29.5H9.426L17.156 20.665L9 10H15.826L20.539 16.231L25.99 10ZM24.829 27.52H26.662L14.83 11.876H12.863L24.829 27.52Z" fill="white"/>
+        </svg>
+    </a>
+</div>            </div>
+            <img class="buy__img" src="img/buy.png" alt="" data-aos="fade-up" data-aos-duration="500" data-aos-delay="">
+        </div>
+    </div>
+</section>
+<footer class="site-footer">
+    <div class="container">
+        <div class="site-footer__wrapper">
+            <a class="site-footer__logo" href="index.html">
+                <img src="img/logo.svg" alt="">
+            </a>
+            <ul class="site-footer__menu">
+                <li class="site-footer__menu-item"><a href="index.html#about" class="mainpage">About</a></li>
+                <li class="site-footer__menu-item"><a href="index.html#tokenomics" class="mainpage">Tokenomics</a></li>
+                <li class="site-footer__menu-item"><a href="index.html#roadmap" class="mainpage">Roadmap</a></li>
+                <li class="site-footer__menu-item"><a href="index.html#partners" class="mainpage">Partners</a></li>
+            </ul>
+            <div class="control">
+    <a href="https://pancakeswap.finance/swap?outputCurrency=0x624351363F49eA7748B43e0c63566D2a5A27506a" class="control__btn ui-btn" target="_blank">Buy now</a>
+    <a href="https://dextools.io/app/en/bnb/pair-explorer/0x46d3336153b51ac3bd40bf68025a5f4991b9d027" class="control__btn ui-btn" target="_blank">Chart</a>
+    <a href="https://t.me/+8AX5DhTNRb40ZDFk" class="control__social ui-btn-icon" target="_blank">
+        <svg class="ui-btn-icon__icon" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="22" cy="20" r="20" fill="#2AABEE"/>
+            <g filter="url(#filter0_d_74_193)">
+            <path d="M29.2189 12.1501C26.4485 13.2741 14.5696 18.0939 11.2874 19.4076C9.08625 20.249 10.3748 21.0379 10.3748 21.0379C10.3748 21.0379 12.2538 21.6689 13.8646 22.1422C15.4752 22.6156 16.3341 22.0897 16.3341 22.0897L23.904 17.0937C26.5884 15.3056 25.9442 16.7781 25.2998 17.4093C23.904 18.7768 21.5954 20.9327 19.6627 22.6683C18.8037 23.4045 19.2331 24.0355 19.6091 24.3511C21.0048 25.5082 24.8168 27.8747 25.0314 28.0324C26.1655 28.8189 28.3964 29.9511 28.7357 27.5591L30.0779 19.3026C30.5075 16.5154 30.9369 13.9384 30.9904 13.2022C31.1517 11.4139 29.2189 12.1501 29.2189 12.1501Z" fill="white"/>
+            </g>
+            <defs>
+            <filter id="filter0_d_74_193" x="0" y="2" width="41" height="37" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+            <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+            <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+            <feOffset/>
+            <feGaussianBlur stdDeviation="5"/>
+            <feComposite in2="hardAlpha" operator="out"/>
+            <feColorMatrix type="matrix" values="0 0 0 0 0.180392 0 0 0 0 0.388235 0 0 0 0 0.933333 0 0 0 0.1 0"/>
+            <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_74_193"/>
+            <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_74_193" result="shape"/>
+            </filter>
+            </defs>
+        </svg>
+    </a>
+    <a href="https://twitter.com/uipepetoken" class="control__social ui-btn-icon" target="_blank">
+        <svg class="ui-btn-icon__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="20" fill="black"/>
+            <path d="M25.99 10H29.298L22.071 18.26L30.573 29.5H23.916L18.702 22.683L12.736 29.5H9.426L17.156 20.665L9 10H15.826L20.539 16.231L25.99 10ZM24.829 27.52H26.662L14.83 11.876H12.863L24.829 27.52Z" fill="white"/>
+        </svg>
+    </a>
+</div>        </div>
+        <div class="site-footer__policy">
+            Copyright © 2023 BNBonk. - All rights reserved.
+        </div>
+    </div>
+</footer>
+<script src="js/app.min.js@v=1704983976"></script>
+</body>
+</html>
